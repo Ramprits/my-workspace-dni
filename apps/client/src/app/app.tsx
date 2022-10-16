@@ -1,15 +1,24 @@
-import styled from 'styled-components';
+import { Refine, ReadyPage, ErrorComponent } from '@pankod/refine-core';
+import { notificationProvider } from '@pankod/refine-mantine';
+import dataProvider from '@pankod/refine-simple-rest';
+import routerProvider from '@pankod/refine-react-router-v6';
 import NxWelcome from './nx-welcome';
-
-const StyledApp = styled.div`
-  // Your style here
-`;
 
 export function App() {
   return (
-    <StyledApp>
-      <NxWelcome title="client" />
-    </StyledApp>
+    <Refine
+      routerProvider={routerProvider}
+      dataProvider={dataProvider('https://api.fake-rest.refine.dev')}
+      notificationProvider={notificationProvider}
+      ReadyPage={ReadyPage}
+      catchAll={<ErrorComponent />}
+      resources={[
+        {
+          name: 'posts',
+          list: NxWelcome,
+        },
+      ]}
+    />
   );
 }
 

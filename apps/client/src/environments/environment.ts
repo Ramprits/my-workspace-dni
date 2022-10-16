@@ -1,6 +1,6 @@
-// This file can be replaced during build by using the `fileReplacements` array.
-// When building for production, this file is replaced with `environment.prod.ts`.
-
 export const environment = {
   production: false,
+  API_URL:
+    'https://noco-db-production-35b3.up.railway.app/api/v1/db/data/v1/dni',
+  AUTH_URL: 'https://noco-db-production-35b3.up.railway.app/api/v1/auth/user',
 };

@@ -1,11 +1,11 @@
-export function NxWelcome({ title }: { title: string }) {
+export function NxWelcome() {
   return (
     <div className="wrapper">
       <div className="container">
         <div id="welcome">
           <h1>
             <span> Hello there, </span>
-            Welcome {title} 👋
+            Welcome NX workspace 👋
           </h1>
         </div>
       </div>
