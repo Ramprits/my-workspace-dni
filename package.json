@@ -9,6 +9,7 @@
   },
   "private": true,
   "dependencies": {
+    "@mantine/ds": "^5.5.5",
     "@pankod/refine-core": "^3.84.0",
     "@pankod/refine-mantine": "^1.6.9",
     "@pankod/refine-react-router-v6": "^3.36.2",
